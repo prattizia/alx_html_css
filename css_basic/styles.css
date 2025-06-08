@@ -12,11 +12,6 @@ main {
   flex: auto; /* Allows main to take up the remaining space */
 }
 
-/* Ensure the <header> and <footer> are stacked on top and bottom */
-header, footer {
-  flex: 0 1 auto; /* These remain at their natural size */
-}
-
 /* Make sure the <article> takes 2 parts and <aside> takes 1 part of the width */
 article {
   flex: 2; /* Takes up 2/3 of the width of the main container */
@@ -26,4 +21,57 @@ article {
 aside {
   flex: 1; /* Takes up 1/3 of the width of the main container */
   overflow-y: auto; /* Enables scrolling for aside if content overflows */
+}
+
+/* Style for the header */
+header {
+  background-color: #f8f8f8; /* Light background for header */
+  padding: 10px;
+}
+
+header ul {
+  list-style-type: none; /* Remove default bullet points */
+  display: flex; /* Display list items horizontally */
+  align-items: center;
+}
+
+header ul li {
+  margin-right: 20px; /* Space between items */
+}
+
+/* Style the logo */
+header .logo {
+  font-size: 2.5rem; /* Make the logo bigger */
+  color: #0073e6; /* Blue color for the logo */
+  margin-right: 20px; /* Space between logo and menu items */
+}
+
+/* Style for the article content */
+article {
+  background-color: #ffffff; /* White background for article */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the aside content */
+aside {
+  background-color: #f1f1f1; /* Light grey background for aside */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for footer */
+footer {
+  background-color: #333; /* Dark background for footer */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the entire body background */
+body {
+  background-color: #fafafa; /* Light grey background for the page */
+  font-family: Arial, sans-serif;
 }
