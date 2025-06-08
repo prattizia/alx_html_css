@@ -1,0 +1,29 @@
+/* Make the <body> element a flex container with column direction */
+body {
+  display: flex;
+  flex-direction: column; /* Stacks header, main, and footer vertically */
+  height: 100vh; /* Makes the body take full height of the viewport */
+}
+
+/* Make the <main> element a flex container with row direction */
+main {
+  display: flex;
+  flex-direction: row; /* Places article and aside side by side */
+  flex: auto; /* Allows main to take up the remaining space */
+}
+
+/* Ensure the <header> and <footer> are stacked on top and bottom */
+header, footer {
+  flex: 0 1 auto; /* These remain at their natural size */
+}
+
+/* Make sure the <article> takes 2 parts and <aside> takes 1 part of the width */
+article {
+  flex: 2; /* Takes up 2/3 of the width of the main container */
+  overflow-y: auto; /* Enables scrolling for article if content overflows */
+}
+
+aside {
+  flex: 1; /* Takes up 1/3 of the width of the main container */
+  overflow-y: auto; /* Enables scrolling for aside if content overflows */
+}
